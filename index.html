@@ -7,5 +7,12 @@
     </head>
     <body>
         Hello, friend. Welcome!
+        <br>
+        <form action="/.netlify/functions/slacker" method="POST">
+            <p>
+              <label>What’s your name?<br><input type="text" name="name"></label>
+            </p>
+            <p><button type="submit">Say hello!</button></p>
+          </form>
     </body>
 </html>
