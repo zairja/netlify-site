@@ -6,9 +6,26 @@
 		<link rel="stylesheet" href="site.css">
     </head>
     <body>
-        
+         
+
             <p>Hello, friend. Welcome!</p>
             <p>This is so strange.</p>
            
+            <form action="/.netlify/functions/slacker" method="POST">
+                <p>
+                  <label>What’s your name?
+                    <br/>
+                    <input type="text" name="name">
+                  </label>
+                </p>
+                <p>
+                  <button type="submit">Say hello!</button>
+                </p>
+            </form>
+
+            <p>
+              <a href="helpme.html">Get help.</a>
+            </p>
+
     </body>
 </html>

