@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="site.css">
-    </head>
-    <body>
-         
 
-            <p>Hello, friend. Welcome!</p>
-            <p>This is so strange.</p>
-           
-            <form action="/.netlify/functions/slacker" method="POST">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+  <link rel="stylesheet" href="site.css">
+
+  <!-- <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-2.21.0.min.css" /> -->
+</head>
+
+<body>
+
+
+  <p>Hello, friend. Welcome!</p>
+  <p>Tell us about yourself.</p>
+
+  <hr>
+  <!-- <form action="/.netlify/functions/slacker" method="POST">
                 <p>
                   <label>What’s your name?
                     <br/>
@@ -21,11 +28,35 @@
                 <p>
                   <button type="submit">Say hello!</button>
                 </p>
-            </form>
+            </form> -->
 
-            <p>
-              <a href="helpme.html">Get help.</a>
-            </p>
+  <form name="contact" method="POST" data-netlify="true" class="pure-form pure-form-aligned">
+    <fieldset>
+      <div class="pure-control-group">
+        <label for="name">Your Name:</label><input type="text" name="name" />
+      </div>
+      <div class="pure-control-group">
+        <label for="email">Your Email:</label><input type="email" name="email" />
+      </div>
+      <div class="pure-control-group">
+        <label for="role">Your Role:</label><select name="role">
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select>
+      </div>
+      <div class="pure-control-group">
+        <label for="message">Message:</label><textarea name="message"></textarea>
+      </div>
+      <p style="margin-left:5em;">
+        <button class="pure-button pure-button-primary" type="submit">Send</button>
+      </p>
 
-    </body>
+  </form>
+
+  <p>
+    <a href="helpme.html">Get help.</a>
+  </p>
+
+</body>
+
 </html>
